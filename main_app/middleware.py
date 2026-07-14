@@ -15,7 +15,7 @@ class LoginCheckMiddleWare(MiddlewareMixin):
             reverse('user_login'),
             reverse('user_logout'),
         }
-
+        
         try:
             user = request.user # Who is the current user ?
             user_type = str(getattr(user, 'user_type', ''))
