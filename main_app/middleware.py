@@ -29,7 +29,7 @@ class LoginCheckMiddleWare(MiddlewareMixin):
                 return None
             return redirect(reverse('login_page'))
 
-(Fix login 500 by handling DB readiness in auth middleware)
+
         if user.is_authenticated:
             if user.user_type == '1': # Is it the HOD/Admin
                 if modulename == 'main_app.student_views':
